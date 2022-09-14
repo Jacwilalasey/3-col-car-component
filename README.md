@@ -12,7 +12,7 @@
 
 ### The challenge
 
-- Create the basic HTML framework for a QR code card component 
+- Create the basic HTML framework for a 3 column code product card component 
 - Use CSS to style the page to match the design spec
 
 ## My process
@@ -24,32 +24,24 @@
 
 ### What I learned
 
-Issues figuring out how to put a border radius across only 4 corners of the 3 columns.
+This challenge was a step up from the QR code challenge in terms of being able to figure out flex box and how to get the corrent alignment, sizing and content within a respose set of 3 product cards. I had some minor issues around figuring out how to set a border-radius around only 4 of the edges, as it always set the border-radius across each each of the 3 product cards. 
 
-Issues with sizing of the product card as a whole.
+Also, some issues around the responsiveness, I was able to set the site to be responsive to mobiles, but in this process (when sizing down) I found that the content in each product card would spill, also the button for the third card would not be visible. I was able to rectify the button issue, but still researching the spill issue. 
 
-HTML in mention
-```html
-<body>
-  <div class="container-main flex">
-    <div class="container-sub">
-      <img src="./images/image-qr-code.png" style="width:250px; height:250px;" alt="">
-      <p><b>Improve your front-end skills by building projects</b></p>
-      <p class="subtext">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>  
-    </div>
-  </div>
-</body>-->
-```
 
 CSS in mention
 ```css
-<!--.container-sub {
-    margin: auto;
-    border-radius: .6rem;
-    justify-items: center;
-    background-color: hsl(0, 0%, 100%);
-    max-width: 50%;
-    box-shadow: 5px 5px 10px 5px hsl(220, 15%, 55%);
-} -->
+@media screen and (max-width:1440px){
+    .container-sub{
+        width: 30%;
+    }
+}
+
+
+@media screen and (max-width:800px){
+    .container-sub{
+        width: 90%;
+    }
+}
 ```
 
