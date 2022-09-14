@@ -61,12 +61,30 @@ body {
     max-width: 80rem;
 }
 
-.container-sub {
+.container-sub1 {
     display: flex;
     flex-direction: column;
     width: 200px;
     height: auto;
     padding: 2em;
+    border-radius: 10px 0 0 10px;
+}
+
+.container-sub2 {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: auto;
+    padding: 2em;
+}
+
+.container-sub3 {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: auto;
+    padding: 2em;
+    border-radius: 0 10px 10px 0;
 }
 
 .container-sub h1,
