@@ -44,48 +44,51 @@
 
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
 }
 
 .container-main {
     display: flex;
     justify-content: center;
+    width: 100%;
     align-items: center;
-    flex-flow: wrap;
-    height: 100%;
-    padding-inline: 2em;
-    margin-inline: auto;
+    height: auto;
+    padding: 2em;
     max-width: 80rem;
-    margin: auto;
 }
 
 .container-sub {
-    height: 500px;
-    width: 20%;
-    align-items: center;
-    padding-inline: 2em;
-    margin-inline: auto;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: auto;
+    padding: 2em;
 }
 
-.flex {
-    display: flex;
-    flex: center;
-    max-width: 50%;
+.container-sub h1,
+.container-sub p, 
+.container-sub button {
+    margin-bottom: 2rem;
 }
+
+/* .flex {
+    display: flex;
+    max-width: 800px;
+    flex-wrap: nowrap;
+} */
 
 div h1 {
     font-family: 'Big Shoulders Display', cursive;
     max-width: 50%;
-    text-align: left;
 }
 
 p {
     font-family: 'Lexend Deca', sans-serif;
     font-size: 15px;
-    padding: 1.5em 0;
-    max-width: 70%;
-    text-align: left;
 }
 
 .btn1 {
@@ -95,7 +98,6 @@ p {
     border:none;
     color:hsl( var(--clr-bright) );
     border-radius: 50px;
-    margin: 3em 0 4em 0;
  }
 
 .btn2 {
@@ -105,7 +107,6 @@ p {
     border:none;
     color:hsl( var(--clr-dark) );
     border-radius: 50px;
-    margin: 3em 0 4em 0;
 }
 
 .btn3 {
@@ -115,7 +116,6 @@ p {
     border:none;
     color:hsl( var(--clr-cyan) );
     border-radius: 50px;
-    margin: 3em 0 4em 0;
 }
 
 .btn1:hover {
@@ -125,7 +125,6 @@ p {
     border: 1px solid hsl( var(--clr-white) );
     color:hsl( var(--clr-white) );
     border-radius: 50px;
-    margin: 3em 0 4em 0;
  }
 
 .btn2:hover {
@@ -135,7 +134,6 @@ p {
     border: 1px solid hsl( var(--clr-white) );
     color:hsl( var(--clr-white) );
     border-radius: 50px;
-    margin: 3em 0 4em 0;
 }
 
 .btn3:hover {
@@ -145,23 +143,33 @@ p {
     border: 1px solid hsl( var(--clr-white) );
     color:hsl( var(--clr-white) );
     border-radius: 50px;
-    margin: 3em 0 4em 0;
 }
 
 
 img {
-    margin: 3em 3em 0 0;
+    width: 5rem;
 }
-
-@media screen and (max-width:1440px){
-    .container-sub{
-        width: 30%;
-    }
-}
-
 
 @media screen and (max-width:800px){
-    .container-sub{
-        width: 90%;
+    .container-main {
+        flex-direction: column;
+    }
+
+    .container-sub {
+        min-width: 200px;
+        width: 50%;
+        max-width: 500px;
+    }
+
+    .bg-bright {
+        border-top-left-radius: 10px; 
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .bg-cyan {
+        border-bottom-left-radius: 10px; 
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0;
     }
 }
